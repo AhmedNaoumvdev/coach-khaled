@@ -30,6 +30,7 @@ function switcher(){
         document.querySelector(".landing").style.color = "black";
         document.querySelector(".services").style.color = "black";
         document.querySelector(".offers").style.color = "black";
+        document.querySelector(".coach").style.color = "black";
     } else {
         root.style.setProperty("--prime-color", "black");
         root.style.setProperty("--secondary-color", "#161616");
@@ -38,6 +39,7 @@ function switcher(){
         document.querySelector(".landing").style.color = "white";
         document.querySelector(".services").style.color = "white";
         document.querySelector(".offers").style.color = "white";
+        document.querySelector(".coach").style.color = "white";
 
     }
 }
