@@ -80,9 +80,22 @@
     @media (max-width: 769px){
         header nav{
             padding: 0 15px;
+            position: relative;
         }
         header nav menu{
             display: none;
+            flex-direction: column;
+            background: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1));
+            backdrop-filter: blur(25px);
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            z-index: 4;
+            position: absolute;
+            right: 0;
+            top: 100%;
         }
         header .logo{
             font-size: 20px;
@@ -255,6 +268,28 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        position: relative;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+    }
+    .services .container .service .ser .front{
+        position: absolute;
+        backface-visibility: hidden;
+    }
+    .services .container .service .ser .back{
+        position: absolute;
+        height: 100%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #e74f3a;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+    }
+    .services .container > .service  .ser:hover{
+        transform: rotateY(180deg);
     }
     .services .container .service .ser i{
         font-size: 45px;
@@ -277,18 +312,19 @@
     @media (max-width: 769px){
         .services .container{
             width: 95vw;
+            justify-content: flex-start;
         }
         .services .container .service{
-            display: inline-block;
             position: relative;
-            background-color: #2cb9a9;
+            height: 40px;
+            width: 100%;
+            /* background-color: #2cb9a9; */
         }
         .services .container .service .ser{
             position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%);
-            width: 200px;
+            top: 50%;
+            left: 12%;
+            width: 250px;
         }
         .services .container h1{
             font-size: 23px;
@@ -315,7 +351,7 @@
         color: white;
     }
     .coach img{
-        width: 500px;
+        width: 400px;
     }
     .coach .container{
         display: flex;
@@ -335,21 +371,24 @@
     }
     @media (max-width:769px){
         .coach{
-            background-position: 650px;
+            background-position: 550px;
         }
         .coach .container{
             flex-direction: column;
+            justify-content: center;
             text-align: center;
             width: 80%;
         }
         .coach img{
-            width: 250px;
+            width: 300px;
         }
         .coach .container h1{
             font-size: 20px;
         }
         .coach .container p{
             font-size: 13px;
+            width: 90%;
+            margin: auto;
         }
     }
 
