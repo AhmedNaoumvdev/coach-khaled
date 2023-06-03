@@ -1,0 +1,393 @@
+/*Color palette*/
+:root{
+    --prime-color: #000000;
+    --secondary-color: #161616;
+    --action-color: #e74f3a;
+}
+/*end Color palette*/
+/*global rules*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/*end global rules*/
+/*header*/
+    header {
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: rgb(255, 255, 255);
+        backdrop-filter: blur(5px);
+        padding: 15px;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        font-size: 30px;
+        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
+    }
+    header nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px ;
+    }
+    header nav menu{
+        list-style-type: none;
+    }
+    header nav menu li{
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 25px;
+    }
+    header .features i{
+        font-size: 40px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    header .features #darkbutton{
+        color: rgb(255, 255, 255);
+    }
+    header nav .humberger{
+        display: none;
+    }
+    @media (max-width: 769px){
+        header nav{
+            padding: 0;
+        }
+        header nav menu{
+            display: none;
+        }
+        header .logo{
+            font-size: 20px;
+        }
+        header nav .features{
+            display: none;
+        }
+        header nav .humberger{
+            display: contents;
+            font-size: 35px;
+            cursor: pointer;
+        }
+    }
+
+/*end header*/
+/*section landing*/
+    .landing {
+        background-color: var(--prime-color);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='37' height='37' viewBox='0 0 90 90'%3E%3Ccircle fill='%23161616' cx='45' cy='45' r='7'/%3E%3Cg fill='%23161616' %3E%3Ccircle cx='0' cy='90' r='7'/%3E%3Ccircle cx='90' cy='90' r='7'/%3E%3Ccircle cx='90' cy='0' r='7'/%3E%3Ccircle cx='0' cy='0' r='7'/%3E%3C/g%3E%3C/svg%3E");
+        width: 100vw;
+        height: 100vh;
+        background-attachment: fixed;
+        position: relative;
+        color: rgb(255, 255, 255);
+    }
+    .landing .image img{
+        height: 90vh;
+        position: absolute;
+        right: 3%;
+        bottom: 0;
+    }
+    .landing .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 35%;
+        left: 10%;
+    }
+    .landing h1 ,.landing p{
+        margin: 0 0 30px 70px;
+        z-index: 1;
+    }
+    .landing h1{
+        font-size: 7vh;
+        width: 60%;
+    }
+    .landing p{
+        font-size: 2vw;
+    }
+    .landing button{
+        width: 200px;
+        height: 70px;
+        border-radius: 35px;
+        border: 3px solid #e74f3a;
+        background: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1));
+        backdrop-filter: blur(15px);
+        color: #e74f3a;
+        font-size: 25px;
+        margin: 0 0 0px 70px;
+    }
+    @media (max-width: 769px){
+        .landing .container{
+            left: -50px;
+            top: 40%;
+        }
+        .landing .image img{
+            right: -35%;
+        }
+        .landing h1{
+            font-size: 30px;
+            width: 300px;
+        }
+        .landing p{
+            font-size: 25px;
+        }
+    }
+
+/*end section landing*/
+/*section services*/
+    .services{
+        background-color: var(--secondary-color);
+        color: white;
+        z-index: 1;
+    }
+    .services .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: fit-content;
+        position: relative;
+        width: 75%;
+        padding-top: 0;
+        margin-top: 0;
+        height: 60vh;
+        text-align: center;
+    }
+    .services .container .textwraper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-align: center;
+        margin-top: 35px;
+    }
+    .services .container h1{
+        width: 80%;
+        font-size: 40px;
+        z-index: 1;
+        margin-top: 10px;
+        opacity: 0.7;
+    }
+    .services .container .maintext1{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% ,-50%);
+        font-size: 200px;
+        color: transparent;
+        -webkit-text-stroke: 3px gray;
+    }
+    .services .container h3{
+        font-size: 30px;
+        opacity: 0.9;
+        font-weight: 400;
+    }
+    .services .container .service{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .services .container .service .ser{
+        width: 250px;
+        height: 250px;
+        border-radius: 20px;
+        text-align: center;
+        margin-right: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .services .container .service .ser i{
+        font-size: 45px;
+    }
+    .services .ser.one{
+        background-color: #4b86fe;
+    }
+    .services .ser.two{
+        background-color: #2cb9a9;
+    }
+    .services .ser.three{
+        background-color: #fe5063;
+    }
+    .services .ser.four{
+        background-color: #feaa30;
+    }
+    .services .ser.five{
+        background-color: #5850a6;
+    }
+    @media (max-width: 769px){
+        .services .container{
+            width: 95vw;
+            overflow: hidden;
+        }
+        .services .container .service{
+            width: 1550px;
+            /* margin-left: 1240px; */
+        }
+        .services .container .service .ser{
+            width: 300px;
+            margin-right: 10px;
+        }
+        .services .container h1{
+            font-size: 25px;
+            width: 90%;
+            line-height: 28px;
+        }
+        .services .container .maintext1{
+            font-size: 80px;
+        }
+        .services .container h3{
+            font-size: 20px;
+        }
+    }
+/*end section services*/
+/*coach*/
+    .coach{
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/images/weight-lifting-concept-with-dumbbell.jpg);
+        width: 100vw;
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+    }
+    .coach img{
+        width: 600px;
+    }
+    .coach .container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 60vw;
+        height: fit-content;
+        position: relative;
+        text-align: left;
+    }
+    .coach .container h1{
+        font-size: 80px;
+    }
+    .coach .container p{
+        font-size: 25px;
+    }
+    @media (max-width:769px){
+        .coach .container{
+            flex-direction: column;
+            text-align: center;
+            width: 80%;
+        }
+        .coach img{
+            width: 250px;
+        }
+        .coach .container h1{
+            font-size: 40px;
+        }
+        .coach .container p{
+            font-size: 20px;
+        }
+    }
+
+/*end coach*/
+/*section plans*/
+    .offers{
+        background-color: var(--secondary-color);
+        color: white;
+    }
+    .offers .container{
+        position: relative;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .offers .container .textwraper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-align: center;
+        margin-top: 35px;
+    }
+    .offers .container h2{
+        width: 80%;
+        font-size: 40px;
+        z-index: 1;
+        margin-top: 10px;
+        opacity: 0.7;
+    }
+    .offers .container .maintext1{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% ,-50%);
+        font-size: 200px;
+        color: transparent;
+        -webkit-text-stroke: 3px gray;
+    }
+    .offers .plans{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: fit-content;
+        color: black;
+        margin-bottom: 20px;
+    }
+    .offers .plans .plan{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-right: 15px;
+        width: 400px;
+        height: 450px;
+        background-color: rgb(255, 255, 255);
+        border-top: 8px solid #e74f3a;
+    }
+    .offers .plans .plan.two{
+        height: 500px;
+        border-top: 50px solid #e74f3a;
+        position: relative;
+    }
+    .offers .plans .plan.two .popular{
+        position: absolute;
+        top: -45px;
+        color: white;
+        font-weight: 400;
+    }
+    .offers .plans .plan p{
+        font-size: 25px;
+    }
+    .offers .plans .plan button{
+        width: 150px;
+        height: 50px;
+        border: none;
+        font-size: 20px;
+        background-color: #e74f3a;
+    }
+    @media (max-width: 769px){
+        .offers .container h2{
+            font-size: 25px;
+            line-height: 30px;
+        }
+        .offers .container .maintext1{
+            font-size: 85px;
+        }
+        .offers .plans{
+            flex-direction: column;
+            margin-top: 30px;
+        }
+        .offers .plans .plan{
+            margin-bottom: 15px;
+            height: 500px;
+        }
+    }
+/*end section plans*/
