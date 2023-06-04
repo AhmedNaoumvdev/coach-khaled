@@ -534,7 +534,7 @@
 /*end section plans*/
 /*reviews section*/
     .reviews {
-        background-color: #000000;
+        background-color: var(--prime-color);
         color: white;
     }
     .reviews .container{
@@ -548,9 +548,9 @@
     .reviews .container .says{
         width: 90%;
         height: 250px;
-        background-color: #161616;
+        background-color: var(--secondary-color);
         border-radius: 30px;
-        border: 2px solid #e74f3a;
+        border: 3px solid #e74f3a;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -562,7 +562,7 @@
     } */
     .reviews hr{
         margin: 10px 0 20px;
-        width: 95%;
+        width: 80%;
     }
     @media (max-width: 769px){
         .reviews .maintext1{
