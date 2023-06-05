@@ -1,20 +1,23 @@
-
 let button = document.getElementById("humberger");
 let menu = document.getElementById("menu");
 let icons = document.querySelector(".socials");
 
-button.addEventListener("click", dropmenu);
+button.onclick = ()=>{
+    menu.classList.toggle("opened");
+    icons.classList.toggle("openedicons");
+}
+// button.addEventListener("click", dropmenu);
 
-function dropmenu(){
-    let computedStyle = getComputedStyle(menu);
-    if (computedStyle.display === "none") {
-        menu.style.display = "flex";
-        icons.style.display = "flex";
-    } else {
-        menu.style.display = "none";
-        icons.style.display = "none";
-    }
-};
+// function dropmenu(){
+//     let computedStyle = getComputedStyle(menu);
+//     if (computedStyle.display === "none") {
+//         menu.style.display = "flex";
+//         icons.style.display = "flex";
+//     } else {
+//         menu.style.display = "none";
+//         icons.style.display = "none";
+//     }
+// };
 
 
 
