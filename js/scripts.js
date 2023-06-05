@@ -1,18 +1,20 @@
 
+let button = document.getElementById("humberger");
+let menu = document.getElementById("menu");
+let icons = document.querySelector(".socials");
 
-// let darkbutton = document.querySelector("#darkbutton");
-// let root = document.querySelector(":root");
-// let rootcss = getComputedStyle(root);
+button.addEventListener("click", dropmenu);
 
-// darkbutton.addEventListener("click", switcher);
-
-// function switcher(){
-//     if(darkbutton.style.color == "white"){
-//         root.style.setProperty("--prime-color", "white");
-//     }else{
-//         root.style.setProperty("--prime-color", "black");
-//     }
-// }
+function dropmenu(){
+    let computedStyle = getComputedStyle(menu);
+    if (computedStyle.display === "none") {
+        menu.style.display = "flex";
+        icons.style.display = "flex";
+    } else {
+        menu.style.display = "none";
+        icons.style.display = "none";
+    }
+};
 
 let darkbutton = document.querySelector("#darkbutton");
 let root = document.querySelector(":root");
@@ -45,3 +47,4 @@ function switcher(){
 
     }
 }
+
