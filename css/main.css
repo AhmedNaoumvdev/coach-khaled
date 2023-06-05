@@ -16,6 +16,7 @@
     padding: 10px;
     margin: 0 auto;
 }
+
 /*end global rules*/
 .socials{
     position: fixed;
@@ -58,10 +59,15 @@
         align-items: center;
     }
     header nav .logo{
-        font-size: 25px;
+        font-size: 1.8vw;
+        transition: color .5s;
     }
     header nav menu{
         list-style-type: none;
+    }
+    header nav a{
+        text-decoration: none;
+        color: inherit;
     }
     header nav menu li{
         display: inline;
@@ -69,6 +75,7 @@
         font-size: 25px;
         cursor: pointer;
         position: relative;
+        transition: color .5s;
     }
     header nav menu li::after{
         position: absolute;
@@ -77,11 +84,10 @@
         color: #e74f3a;
         width: 10px;
         height: 2px;
-        transition:1.5s;
+        ;
     }
-    header nav menu li:hover{
+    header nav menu li:hover , header nav .logo:hover{
         color: #e74f3a;
-        text-decoration: underline;
     }
     header .features i{
         font-size: 40px;
@@ -157,6 +163,7 @@
         background-attachment: fixed;
         position: relative;
         color: rgb(255, 255, 255);
+        overflow: hidden;
     }
     .landing .image img{
         height: 90vh;
@@ -177,7 +184,7 @@
         z-index: 1;
     }
     .landing h1{
-        font-size: 7vh;
+        font-size: 5vh;
         width: 60%;
     }
     .landing p{
@@ -254,9 +261,9 @@
         align-items: center;
         height: fit-content;
         position: relative;
-        width: 75%;
+        width: 80%;
         padding-top: 0;
-        margin-top: 0;
+        margin: 0 auto;
         height: fit-content;
         text-align: center;
     }
@@ -287,6 +294,9 @@
         margin: 0;
         -webkit-text-stroke: 3px gray;
     }
+    .services .container .maintext1::before{
+        left: 40%;
+    }
     .services .container h3{
         font-size: 18px;
         opacity: 0.9;
@@ -298,6 +308,7 @@
         width: 100%;
         align-items: center;
         justify-content: center;
+        margin: auto;
     }
     .services .container .service .ser{
         width: 250px;
@@ -381,6 +392,10 @@
         }
         .services .container h3{
             font-size: 20px;
+            width: 60%;
+        }
+        .maintext1::before{
+            margin: 8px;
         }
     }
 /*end section services*/
@@ -466,13 +481,20 @@
         opacity: 0.7;
     } */
     .maintext1{
-        /* position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50% ,-50%); */
         font-size: 150px;
         color: transparent;
         -webkit-text-stroke: 3px gray;
+        position: relative;
+    }
+    .maintext1::before{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 30px;
+        left: 43%;
+        width: 80px;
+        height: 5px;
+        background-color: #e74f3a;
     }
     .offers .plans{
         display: flex;
@@ -490,17 +512,19 @@
         align-items: center;
         justify-content: space-evenly;
         margin-right: 15px;
-        width: 300px;
-        height: 400px;
+        max-width: 350px;
+        height: 55vh;
         transition: 0.5s;
         background-color: rgb(255, 255, 255);
         border-top: 8px solid #e74f3a;
     }
     .offers .plans .plan:hover{
-        box-shadow: 0 5px 10px rgb(82, 82, 82);
+        color: white;
+        background-color: var(--secondary-color);
+        box-shadow: 0 5px 10px #e74f3a;
     }
     .offers .plans .plan.two{
-        height: 440px;
+        height: 60vh;
         border-top: 50px solid #e74f3a;
         position: relative;
     }
@@ -520,6 +544,11 @@
         font-size: 20px;
         background-color: #e74f3a;
         cursor: pointer;
+        border-radius: 30px;
+        transition: box-shadow .4s;
+    }
+    .offers .plans .plan button:hover{
+        box-shadow: 0 5px 15px black;
     }
     .offers .plans .plan .price{
         font-size: 35px;
@@ -546,6 +575,10 @@
         }
         .offers .plans .plan.two{
             width: 300px;
+        }
+        .maintext1::before{
+            top: 0;
+            left: 35%;
         }
     }
 /*end section plans*/
